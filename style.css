@@ -1,0 +1,202 @@
+/* style.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1a1a1a;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#gameCanvas {
+    width: 800px;
+    height: 600px;
+    border: 3px solid #ffffff40;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0,255,200,0.2);
+    transform: 
+        rotateX(calc(-5deg * var(--mouse-y))) 
+        rotateY(calc(5deg * var(--mouse-x)))
+        translateZ(50px);
+    transition: transform 0.3s ease-out;
+}
+
+#score {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 32px;
+    font-family: 'Arial Black', sans-serif;
+    color: #00ff88;
+    text-shadow: 0 0 15px #00ff88;
+    z-index: 1;
+}
+
+#level {
+    position: absolute;
+    top: 60px;;
+    right: 30px;
+    font-size: 24px;
+    font-family: 'Arial Black', sans-serif;
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+    transition: transform 0.3s;
+}
+
+.timer {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    width: 200px;
+    height: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#timerBar {
+    height: 100%;
+    width: 100%;
+    background: #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+    transition: width 0.3s ease;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: #00ff88;
+    z-index: 100;
+    text-shadow: 0 0 15px #00ff88;
+}
+
+#gameOver button {
+    background: #00ff88;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 0 15px #00ff88;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#difficultyScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    padding: 40px 60px;
+    border-radius: 20px;
+    text-align: center;
+    color: #00ff88;
+    z-index: 100;
+    text-shadow: 0 0 15px #00ff88;
+}
+
+#difficultyScreen button {
+    background: #00ff88;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 0 15px #00ff88;
+}
+
+#difficultyScreen button:hover {
+    transform: scale(1.1);
+}
+
+#difficultyScreen h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+#restartButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00ff88;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 0 15px #00ff88;
+    text-shadow: none;
+}
+
+#restartButton:hover {
+    background-color: #00cc71;
+}
+/* style.css */
+#pauseButton {
+    position: absolute;
+    top: 25px;
+    right: 25px; /* Перемещаем в правый верхний угол */
+    transform: none; /* Убираем трансформацию */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00ff88;
+}
+
+#pauseMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: #00ff88;
+    z-index: 100;
+    text-shadow: 0 0 15px #00ff88;
+}
+
+#pauseMenu button {
+    display: block;
+    width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    background: #00ff88;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+#pauseMenu button:hover {
+    background: #00cc71;
+}
+
+#difficultyLabel {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Ball Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="difficultyScreen">
+        <h2 data-lang="difficulty">Выберите сложность</h2>
+        <button id="startEasy">Лёгкий</button>
+        <button id="startMedium">Средний</button>
+        <button id="startHard">Сложный</button>
+    </div>
+
+    <div id="score">Счёт: 0</div>
+    <div id="level">Уровень: 1</div>
+    <button id="pauseButton">⏸</button>
+    
+    <div id="pauseMenu" class="hidden">
+        <h2 data-lang="pause">Пауза</h2>
+        <button id="resumeButton" data-lang="resume">Продолжить</button>
+        <button id="languageButton" data-lang="language">Сменить язык</button>
+        <button id="soundButton" data-lang="sound">Звук: ON</button>
+        <button id="mainMenuButton" data-lang="mainMenu">Главное меню</button>
+    </div>
+
+    <div class="timer">
+        <div id="timerBar"></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <button id="restartButton" class="hidden" data-lang="restart">Рестарт</button>
+    
+    <div id="gameOver" class="hidden">
+        <h2 data-lang="gameOver">GAME OVER</h2>
+        <p><span data-lang="finalScore">Ваш результат:</span> <span id="finalScore">0</span></p>
+        <p id="difficultyLabel"></p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
